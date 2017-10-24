@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
+/* Version 0.0.1
  * In order to play the game you need to set  .LevelSizeSelected to desired level size and then call PrepareLevel() method.
  * To reveal position in the matrix call Update(<int value>, <int value>). Method takes x and y position from the user.
  */

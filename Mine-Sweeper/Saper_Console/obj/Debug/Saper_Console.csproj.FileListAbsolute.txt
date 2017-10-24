@@ -4,3 +4,6 @@ c:\users\krystian\documents\visual studio 2013\Projects\Saper_Console\Saper_Cons
 c:\users\krystian\documents\visual studio 2013\Projects\Saper_Console\Saper_Console\bin\Debug\Saper_Console.pdb
 c:\users\krystian\documents\visual studio 2013\Projects\Saper_Console\Saper_Console\obj\Debug\Saper_Console.exe
 c:\users\krystian\documents\visual studio 2013\Projects\Saper_Console\Saper_Console\obj\Debug\Saper_Console.pdb
+C:\Users\Krystian\Documents\GitHub\Console-Mine-Sweeper\Mine-Sweeper\Saper_Console\bin\Debug\Saper_Console.exe.config
+C:\Users\Krystian\Documents\GitHub\Console-Mine-Sweeper\Mine-Sweeper\Saper_Console\obj\Debug\Saper_Console.exe
+C:\Users\Krystian\Documents\GitHub\Console-Mine-Sweeper\Mine-Sweeper\Saper_Console\obj\Debug\Saper_Console.pdb

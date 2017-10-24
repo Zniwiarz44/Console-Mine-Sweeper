@@ -10,32 +10,62 @@ namespace Saper_Console
     {
         static void Main(string[] args)
         {
-            BuildLevel bl = new BuildLevel();
-            bl.LevelSizeSelected = LevelSize.Easy;
-            bl.PrepareLevel();
-            //Console.Clear();
-            while (true)
+
+            string input = "5";
+            while (!input.Equals("q"))
             {
-                try
+                Console.WriteLine("Start new game by selecting a number:\n1 Easy\n2 Medium\n3 Expert\nq to Quit the game");
+
+                BuildLevel bl = new BuildLevel();
+                switch (input = Console.ReadLine())
                 {
-                    int x = Convert.ToInt32(Console.ReadLine());
-                    int y = Convert.ToInt32(Console.ReadLine());
-                    if (!bl.Update(x, y))
-                    {
+                    case "1":
+                        bl.LevelSizeSelected = LevelSize.Easy;
                         break;
+                    case "2":
+                        bl.LevelSizeSelected = LevelSize.Medium;
+                        break;
+                    case "3":
+                        bl.LevelSizeSelected = LevelSize.Expert;
+                        break;
+                    case "q":
+                        input = "q";
+                        break;
+                    default:
+                        Console.WriteLine("Please try again");
+                        break;
+                }
+                if (!input.Equals("q"))
+                {
+                    bl.PrepareLevel();
+                }
+
+                //Console.Clear();
+                while (!input.Equals("q"))
+                {
+                    try
+                    {
+                        Console.WriteLine("Horizontal number");
+                        var x = Console.ReadLine();
+                        Console.WriteLine("Vertical number");
+                        var y = Console.ReadLine();
+                        if (x.Equals("q") || y.Equals("q"))
+                        {
+                            input = "q";
+                            break;
+                        }
+                        if (!bl.Update(Convert.ToInt32(x), Convert.ToInt32(y)))
+                        {
+                            break;
+                        }
+                        Console.WriteLine("\nPress 'q' to quit");
+                    }
+                    catch (SystemException s)
+                    {
+                        Console.WriteLine("Try again.\n" + s.Message);
                     }
                 }
-                catch(SystemException s)
-                {
-                    Console.WriteLine("Try again.\n" + s.Message);
-                }
             }
-            Console.ReadLine();
-
-
-
-
-
             // bl.GameOver();
 
             /*Dictionary<string, Node> node = new Dictionary<string, Node>();
